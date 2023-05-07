@@ -1,5 +1,5 @@
 # A simple blog application
-<hr />
+
 ## Application stack
 -  Backend: Spring, MongoDB
 -  Frontend: React Js
