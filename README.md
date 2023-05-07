@@ -1,4 +1,4 @@
-# A simple blog application
+# Blog App
 
 ## Application stack
 -  Backend: Spring, MongoDB
