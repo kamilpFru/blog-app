@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Montserrat:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+
+    h1 {
+        font-weight: 300;
+    }
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10%;
+        background-color: rgb(252, 248, 248);
+        border-bottom: 1px solid rgba(190, 190, 190, 0.445);
+    }
+
+    .logo {
+        padding-right: 20px;
+        .logoLink {
+            text-decoration: none;
+            color: black;
+            h1 {
+                font-weight: 400;
+            }
+        }
+    }
+
+    .links {
+        display: flex;
+        gap: 20px;
+
+        .link, .login, .write {
+            text-decoration: none;
+            color: black;
+            transition: all 0.3s ease 0s;
+            &:hover {
+                color:rgb(172, 121, 44)
+            }
+        }
+        h6 {
+            font-size: 0.9vw;
+            font-weight: 300;
+            margin-top:  0;
+            margin-right: 25px;
+          }
+    }
+}
+
+.home {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    .posts {
+
+       .recentStories {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+       }
+
+        .headPost {
+            height: 500px;
+            background-color: rgb(235, 235, 169);
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            min-width: 1000px;
+            
+
+            .content {
+                min-width: 800px;
+                max-width: 70%;
+                overflow: hidden;
+                height: 85%;
+                background-color: white;
+                display: flex;
+
+                .text {
+                    padding: 30px;
+                    flex: 4;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+                    padding-top: 3.5em;
+
+                    h1 {
+                        font-size: 1.7em;
+                    }
+
+                    p {
+                        color: rgb(100, 100, 100);
+                        font-size: 1.2em;
+                    }
+
+                    button {
+                        width: 100px;
+                        box-shadow: 0px 0px 3px -2px;
+                        text-decoration: none;
+                        cursor: pointer;
+                        border: none;
+                        padding: 5px;
+                        transition: all 0.3s ease 0s;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        font-size: 0.7em;
+                        &:hover {
+                            background-color: rgb(231, 231, 122);
+                        }
+                    }
+                }
+
+                .img {
+                    flex: 5;
+                    // height: 100%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                        min-height: 100%;
+                    }
+                }
+            }
+        }
+
+        .recentPosts {
+            width: 65%;
+            min-width: 1000px;
+            display: grid;
+            height: 1200px;
+            grid-template-columns: repeat(3, 30%);
+            grid-template-rows: repeat(3, 30%);
+            gap: 5%;
+            margin: 0 auto;
+
+            .post {
+                display: flex;
+                flex-direction: column;
+            
+            
+                .img {
+                    height: 75%;
+                    margin: 0 auto;
+                    max-width: 90%;
+                    box-shadow: 6px 4px 25px -11px rgba(66, 68, 90, 1);
+                    display: flex;
+                    justify-content: center;
+                    overflow: hidden;
+                    img {
+                        height: 100%;
+                    }
+                }
+                .content {
+                    padding: 5%;
+                    padding-top: 0;
+                    height: 20%;
+
+                    h5 {
+                        font-weight: 100;
+                        padding: 7px 0px 6px 0px;
+                        letter-spacing: 3px;
+                        color: grey;
+                    }
+
+                    h3 {
+                        font-weight: 100;
+                        letter-spacing: 1.5px;
+                        font-size: 1em;
+                        line-height: 1.3;
+                        transition: all 0.3s ease 0s;
+                        &:hover {
+                            color: rgb(105, 105, 40);
+                        }
+                    }
+
+                    .link {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.add {
+    padding: 150px 100px 100px 100px;
+    display: flex;
+    gap: 20px;
+    height: 40vw;
+
+    .content {
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        .title {
+            width: 200px;
+            padding: 7px;
+            // border
+        }
+
+        .writing {
+            width: 80%;
+            min-height: 60%;
+            word-wrap: break-word;
+        }
+    }
+    .menu {
+        padding-top: 40px;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        line-height: 40px;
+
+        .item {
+            text-align: center;
+            width: 70%;
+            padding: 10px;
+            letter-spacing: 1px;
+            display: flex;
+            flex-direction: column;
+            // text-align: center;
+            border: 1px solid rgb(214, 214, 214);
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                button {
+                    width: 100px;
+                    box-shadow: 0px 0px 3px -2px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    border: none;
+                    padding: 5px;
+                    margin: 0 auto;
+                    transition: all 0.3s ease 0s;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: 0.6em;
+                    &:hover {
+                        background-color: rgb(231, 231, 122);
+                    }
+                }
+            }
+        }
+
+        .upload {
+            cursor: pointer;
+            color: rgb(36, 36, 100);
+        }
+
+        .radio {
+            cursor: pointer;
+        }
+    }
+}
+
+footer {
+
+    position: relative;
+    min-width: 1000px;
+    bottom: 0;
+    margin-top: 100px;
+    padding: 40px;
+    width: 100%;
+    background-color: rgb(24, 43, 59);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40%;
+    .logoLink {
+        text-decoration: none;
+        color: white;
+        font-size: 0.8em;
+    }
+
+    p {
+        color: white;
+        letter-spacing: 1px;
+        font-size: 0.8em;
+        text-transform: uppercase;
+    }
+}
+
+.authorization {
+    padding-top: 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 40vw;
+
+    .container {
+        width: 400px;
+        
+        background-color: beige;
+        padding: 50px 100px 80px 100px;
+
+        h1 {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        input {
+            padding: 8px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        button {
+            width: 100px;
+            box-shadow: 0px 0px 3px -2px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            padding: 5px;
+            margin: 0 auto;
+            transition: all 0.3s ease 0s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.7em;
+            &:hover {
+                background-color: rgb(231, 231, 122);
+            }
+        }
+
+        .link {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+            color: rgb(27, 27, 95);
+        }
+    }
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    min-height: 800px;
+
+    .container {
+        width: 75%;
+        display: flex;
+
+        .content {
+            flex: 5;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            img {
+                width: 90%;
+            }
+
+            p {
+                width: 90%;
+                letter-spacing: 1.5px;
+                line-height: 25px;
+                font-style: italic;
+                font-size: 18px;
+            }
+        }
+
+        .menu {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            margin-top: 50px;
+            text-align: center;
+            gap: 40px;
+            h2 {
+                font-weight: 100;
+                margin-bottom: 20px;
+                
+            }
+            .post {
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                width: 90%;
+                gap: 10px;
+                align-items: center;
+
+                .link {
+                    cursor: pointer;
+                }
+                p{
+                    font-size: 17px;
+                    text-decoration: none;
+                }
+                img {
+                    width: 90%;
+                    border-radius: 4px;
+                    box-shadow: 0px 0px 3px -2px;
+
+                }
+                button {
+                    width: 100px;
+                    box-shadow: 0px 0px 3px -2px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    border: none;
+                    padding: 5px;
+                    margin: 0 auto;
+                    transition: all 0.3s ease 0s;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-size: 0.7em;
+                    &:hover {
+                        background-color: rgb(231, 231, 122);
+                    }
+                }
+            }
+        }
+    }
+}
